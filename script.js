@@ -1,6 +1,9 @@
-let maxnum = Number(prompt("Welcome! Enter your max number:"));
+let maxnum = parseInt(prompt("Welcome! Enter your max number:"));
+while(!maxnum){
+    maxnum = parseInt(prompt("Enter a valid number"));
+}
 let num = Math.floor(Math.random()*maxnum)+1; // the target will be chosen randomly from 1 to maxnum
-let input = prompt("Guess the number:");
+let input = parseInt(prompt("Guess the number:"));
 let i=0;
 while(true){
     if(input.toLowerCase()==="q"){
